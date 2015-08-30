@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+
+public class Numbergame {
+    public static void main(String[] args) {
+        Scanner syote = new Scanner(System.in);
+        
+        int number = 0;
+        int biggest = -1;
+        int negative = 0;
+		
+        do {					
+            System.out.println("Give me any number");
+            number = syote.nextInt();
+            if (number > biggest) {
+                biggest = number;
+            } else if (number < 0) {
+                negative = number;
+            }
+        } while (number >= 0);	
+		
+        if (biggest > -1) {
+            System.out.println("The biggest number was: " + biggest);
+        } else {
+            System.out.println("The biggest number was: " + negative);
+        }
+    }
+}
+
+// Halusin vähän koittaa tehä siitä kattavamman ja huomioida tilanteen,
+// jos heti annetaan negatiivinen luku
